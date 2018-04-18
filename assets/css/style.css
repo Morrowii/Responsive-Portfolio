@@ -38,7 +38,6 @@ h1 {
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
     float: right;
 }
 
@@ -138,7 +137,7 @@ textarea {
     resize: vertical;
 }
 
-#wrapper:after {
+#wrapper::after {
     content: "";
     display: block;
     height: 60px;
@@ -180,10 +179,40 @@ textarea {
 
 @media screen and (max-width : 640px) {
     .nav-bar {
+        position: relative;
+    }
 
+    #nav-bar::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
+    h1 {
+        display: block;
+        text-align: center;
+        clear: right;
+    }
+
+    .nav-link {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: auto;
     }
 
     .main-block {
-        
+        overflow: hidden;
+    }
+
+    #profile-photo {
+        width: 200px;
+        height: 200px;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    #bio {
+        margin-top: 30px;
     }
 }
