@@ -76,6 +76,8 @@ hr {
 #bio {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 20px;
+    animation-name: fadeIn;
+    animation-duration: 3s;
 }
 
 #profile-photo {
@@ -180,10 +182,6 @@ textarea {
 }
 
 @media screen and (max-width : 640px) {
-    #nav-container {
-        
-    }
-    
     #nav-bar {
         width: 100%;
         margin: 0px;
@@ -224,3 +222,13 @@ textarea {
         margin-bottom: 30px;
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} 
